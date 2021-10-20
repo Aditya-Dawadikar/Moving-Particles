@@ -1,0 +1,5 @@
+.center {
+    position: absolute;
+    left: calc(50vw - 250px);
+    top: calc(50vh - 250px)
+}

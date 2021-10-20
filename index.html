@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+<link rel='stylesheet' href='style.css'>
+<body>
+    <div class="h2 m-2">Controls</div>
+    <div class="m-3">
+        <label for="dot_count">Dot count</label>
+        <input value=0 type="range" id="dot_count" min=5 max=500 onchange="changeCount(event)"></input>
+        <br>
+        <label for="dot_radius">Dot radius</label>
+        <input value=0 type="range" id="dot_radius" min=0 max=10 onchange="changeRadius(event)"></input>
+        <br>
+        <label for="dot_sense">Dot sense</label>
+        <input value=0 type="range" id="dot_sense" min=20 max=100 onchange="changeSense(event)"></input>
+        <br>
+        <label for="dot_color">Dot color</label>
+        <input type="color" id="dot_color" value="#000000" onchange="changeColor(event)"></input>
+    </div>
+
+    <canvas class='center' id='cnvs'></canvas>
+</body>
+<script src='controls.js'></script>
+<script src='utility.js'></script>
+<script src='line.js'></script>
+<script src='main.js'></script>
+</html>
